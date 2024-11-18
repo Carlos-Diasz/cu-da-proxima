@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pergunta</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        article {
+            display: flex;
+
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        article button {
+            margin: 50px;
+        }
+
+        #nao,
+        #sim {
+            padding: 20px;
+            border: solid 2px black;
+            border-radius: 10px;
+        }
+
+        #nao {
+            background-color: darkred;
+        }
+
+        #sim {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <h1>Cuzinho na proxima vez?</h1>
+        <article>
+
+            <div>
+                <button id="sim" onclick="sim()">Sim</button>
+            </div>
+            <div>
+                <button id="nao" onclick="desvia(this)">Não</button>
+            </div>
+        </article>
+    </main>
+
+    <script>
+        function sim() {
+            alert("PREPARE O CU HIHIHIHIHI");
+        }
+
+        function desvia(btn) {
+            // btn declarado na função
+            btn.style.position = 'absolute';
+            btn.style.bottom = geraPosicao(10, 90);
+            btn.style.left = geraPosicao(10, 90);
+            console.log('opa, desviei...');
+        }
+
+        function geraPosicao(min, max) {
+            return (Math.random() * (max - min) + min) + "%";
+        }
+    </script>
+</body>
+
+</html>

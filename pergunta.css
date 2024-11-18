@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+article {
+    display: flex;
+    
+}
+
+h1 {
+    text-align: center;
+}
+
+article button {
+    margin: 50px;
+}
+
+#nao, #sim {
+    padding: 20px;
+    border: solid 2px black;
+    border-radius: 10px;
+}
+
+#nao {
+    background-color: darkred;
+}
+
+#sim {
+    background-color: darkgreen;
+}
